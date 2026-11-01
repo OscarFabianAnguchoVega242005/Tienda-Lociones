@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin · La Victoria</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../imagenes/logo.png">
+<link rel="stylesheet" href="../css/tienda.css">
+</head>
+<body class="admin">
+<div id="msg" role="status"></div>
+<main class="ad">
+
+<section id="login" class="box narrow" hidden>
+  <h1 class="serif gold">La Victoria · Admin</h1>
+  <nav class="tabs cap" id="lt"><button type="button" data-m="in" class="on">Iniciar sesion</button><button type="button" data-m="up">Crear cuenta</button></nav>
+  <form id="lf">
+    <label>Correo<input id="le" type="email" autocomplete="username" required></label>
+    <label>Contraseña<input id="lp" type="password" autocomplete="current-password" required></label>
+    <p id="lerr" class="bad"></p>
+    <button class="btn" id="lb" type="submit">Entrar</button>
+  </form>
+</section>
+
+<section id="app" hidden>
+  <div class="top">
+    <h1 class="serif">Panel de administracion</h1>
+    <div><a href="../index.html" class="lnk cap">Ver tienda</a> &nbsp; <button id="out" class="lnk cap">Salir</button></div>
+  </div>
+  <nav class="tabs cap" id="tabs">
+    <button data-t="prod" class="on">Productos</button>
+    <button data-t="ord">Pedidos</button>
+    <button data-t="set">Ajustes</button>
+  </nav>
+
+  <section id="t-prod">
+    <div class="bar">
+      <input id="pq" type="search" placeholder="Buscar producto o marca">
+      <button id="new" class="btn sm" type="button">+ Nuevo producto</button>
+    </div>
+    <div id="plist" class="tbl"></div>
+  </section>
+
+  <section id="t-ord" hidden><div id="olist" class="tbl"></div></section>
+
+  <section id="t-set" hidden>
+    <form id="sf" class="box">
+      <p class="mute">Asi se vera el pie de pagina de la tienda:</p>
+      <p id="sprev" class="serif" style="font-size:22px"></p>
+      <label>Año<input id="sy" inputmode="numeric" maxlength="4" required></label>
+      <button id="sny" class="lnk cap" type="button">Usar el año actual</button>
+      <label>Texto<input id="st" maxlength="120" required></label>
+      <button class="btn" type="submit">Guardar pie de pagina</button>
+    </form>
+  </section>
+</section>
+</main>
+
+<div id="pm" class="modal" hidden>
+  <form id="pf" class="box">
+    <h2 id="ftitle" class="serif">Nuevo producto</h2>
+    <label>Nombre<input id="fn" maxlength="100" required></label>
+    <label>Marca<input id="fb" maxlength="60"></label>
+    <div class="two">
+      <label>Categoria<select id="fc"><option>Hombre</option><option>Mujer</option></select></label>
+      <label>Tamaño<input id="fm" maxlength="20" value="100 ml"></label>
+    </div>
+    <label>Precio (COP, 0 = "Consultar")<input id="fp" type="number" min="0" step="1000" value="0"></label>
+    <label class="chk"><input id="fa" type="checkbox" checked> Visible en la tienda</label>
+    <label>Foto (JPG, PNG o WEBP)<input id="fi" type="file" accept="image/jpeg,image/png,image/webp"></label>
+    <img id="fprev" alt="Vista previa" hidden>
+    <label class="chk"><input id="frm" type="checkbox"> Quitar la foto actual</label>
+    <div class="two">
+      <button type="button" id="fc2" class="btn ghost">Cancelar</button>
+      <button type="submit" id="fs" class="btn">Guardar</button>
+    </div>
+  </form>
+</div>
+
+<script src="../js/config.js"></script>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>

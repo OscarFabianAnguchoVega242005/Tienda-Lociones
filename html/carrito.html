@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carrito · La Victoria Perfumería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../imagenes/logo.png">
+<link rel="stylesheet" href="../css/tienda.css">
+</head>
+<body>
+<div class="topbar">
+  <header>
+    <a href="../index.html" class="header-brand">
+      <div class="logo-icon"><img src="../imagenes/logo.png" alt="La Victoria" onerror="this.outerHTML='<span class=&quot;logo-mono&quot;>LV</span>'"></div>
+      <div>
+        <h1>La Victoria</h1>
+        <div class="header-subtitle">Perfumería</div>
+      </div>
+    </a>
+    <nav>
+      <a href="../index.html" class="nav-btn"><span>🏠</span><span>Inicio</span></a>
+      <a href="ubicacion.html" class="nav-btn"><span>📍</span><span>Ubicación</span></a>
+      <a href="admin.html" class="nav-btn"><span>🔐</span><span>Ingresar</span></a>
+    </nav>
+  </header>
+
+  <div class="novedades-container">
+    <div class="novedades">
+      <span>🛒 Revisa tu carrito</span>
+      <span>📦 Selecciona los perfumes que quieres comprar</span>
+      <span>📲 Confirma tu pedido por WhatsApp</span>
+      <span>🚚 Envío a domicilio o recoge en el local</span>
+      <span>🛒 Revisa tu carrito</span>
+      <span>📦 Selecciona los perfumes que quieres comprar</span>
+      <span>📲 Confirma tu pedido por WhatsApp</span>
+      <span>🚚 Envío a domicilio o recoge en el local</span>
+    </div>
+  </div>
+</div>
+
+<main class="carrito-main">
+  <div class="carrito-contenedor">
+    <h2>🛒 Tu Carrito</h2>
+
+    <div class="carrito-header" id="carritoHeader" hidden>
+      <label>
+        <input type="checkbox" id="selectTodo">
+        Seleccionar todo
+      </label>
+      <button class="btn-vaciar" id="btnVaciar">🗑️ Vaciar carrito</button>
+    </div>
+
+    <div id="listaCarrito"></div>
+
+    <div id="total-carrito"></div>
+
+    <button class="btn-whatsapp" id="btnContinuar">Continuar con la compra</button>
+  </div>
+</main>
+
+<footer>
+  <p id="pie">© 2026 La Victoria · Todos los derechos reservados</p>
+</footer>
+
+<!-- Modal de compra -->
+<div id="modal-compra" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalTitulo" class="serif">📦 Revisa tu pedido</h3>
+      <button class="btn-cerrar" id="cerrarModal" aria-label="Cerrar">×</button>
+    </div>
+
+    <div id="modal-contenido">
+      <h4>Perfumes:</h4>
+      <div id="productosSeleccionados" class="productos-resumen"></div>
+
+      <div class="resumen-costos">
+        <div class="linea-costo"><span>Subtotal:</span><strong id="subtotalValor">$0</strong></div>
+        <div class="linea-costo"><span>Envío:</span><strong id="envioValor">—</strong></div>
+        <div class="linea-costo total"><span>Total:</span><span id="totalValor">$0</span></div>
+      </div>
+
+      <h4>¿Cómo recibirás tu pedido?</h4>
+
+      <div class="opcion-entrega">
+        <input type="radio" id="entregaRecoger" name="tipo-entrega" value="pickup">
+        <label for="entregaRecoger">
+          <strong>📍 Recoger en el local</strong>
+          <small id="direccionLocal">—</small>
+        </label>
+      </div>
+
+      <div class="opcion-entrega">
+        <input type="radio" id="entregaEnvio" name="tipo-entrega" value="home" checked>
+        <label for="entregaEnvio">
+          <strong>🚚 Envío a domicilio</strong>
+          <small id="costoEnvio">—</small>
+        </label>
+      </div>
+
+      <div id="campo-direccion">
+        <label for="direccion-entrega">Dirección de entrega:</label>
+        <textarea id="direccion-entrega" rows="3" placeholder="Ej: Calle 123 #45-67, Barrio, Ciudad"></textarea>
+      </div>
+
+      <button id="btn-comprar-whatsapp" disabled>Comprar por WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+
+<script src="../js/config.js"></script>
+<script src="../js/carrito.js"></script>
+<script src="../js/fx.js"></script>
+</body>
+</html>

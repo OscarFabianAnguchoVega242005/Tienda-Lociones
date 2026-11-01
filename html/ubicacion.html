@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ubicación · La Victoria Perfumería</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../imagenes/logo.png">
+<link rel="stylesheet" href="../css/tienda.css">
+</head>
+<body>
+<div class="topbar">
+  <header>
+    <a href="../index.html" class="header-brand">
+      <div class="logo-icon"><img src="../imagenes/logo.png" alt="La Victoria" onerror="this.outerHTML='<span class=&quot;logo-mono&quot;>LV</span>'"></div>
+      <div>
+        <h1>La Victoria</h1>
+        <div class="header-subtitle">Perfumería</div>
+      </div>
+    </a>
+    <nav>
+      <a href="../index.html" class="nav-btn"><span>🏠</span><span>Inicio</span></a>
+      <a href="carrito.html" class="nav-btn"><span>🛒</span><span>Carrito</span></a>
+      <a href="admin.html" class="nav-btn"><span>🔐</span><span>Ingresar</span></a>
+    </nav>
+  </header>
+
+  <div class="novedades-container">
+    <div class="novedades">
+      <span>📍 Visítanos</span>
+      <span>🌸 La Victoria Perfumería</span>
+      <span>🕒 Atención de lunes a sábado</span>
+      <span>📲 O pídenos tu pedido por WhatsApp</span>
+      <span>📍 Visítanos</span>
+      <span>🌸 La Victoria Perfumería</span>
+      <span>🕒 Atención de lunes a sábado</span>
+      <span>📲 O pídenos tu pedido por WhatsApp</span>
+    </div>
+  </div>
+</div>
+
+<main class="ubicacion-main">
+  <h2 class="gold">📍 Encuéntranos aquí</h2>
+
+  <div class="mapa-frame">
+    <span class="pin">📍</span>
+    <span class="cap-txt" id="mapaTexto">La Victoria · Perfumería</span>
+  </div>
+
+  <p class="direccion" id="lAddr">Cargando dirección…</p>
+  <p class="horario" id="lHrs"></p>
+
+  <a class="btn-maps" id="lMap" href="#" target="_blank" rel="noopener noreferrer" aria-disabled="true">Ver en Google Maps</a>
+</main>
+
+<footer>
+  <p id="pie">© 2026 La Victoria · Todos los derechos reservados</p>
+</footer>
+
+
+<script src="../js/config.js"></script>
+<script src="../js/ubicacion.js"></script>
+<script src="../js/fx.js"></script>
+</body>
+</html>

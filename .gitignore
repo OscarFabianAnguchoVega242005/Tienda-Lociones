@@ -1,0 +1,25 @@
+# Secretos (nunca al repo)
+.env
+.env.*
+.dev.vars
+*.pem
+*.key
+config.local.js
+js/config.js
+
+# Cloudflare / Supabase CLI
+.wrangler/
+supabase/.temp/
+supabase/.branches/
+supabase/schema.sql
+
+# Dependencias y builds
+node_modules/
+dist/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

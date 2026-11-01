@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Victoria · Perfumería</title>
+<meta name="description" content="Fragancias de diseñador, de nicho y árabes. Elige, arma tu pedido y confírmalo por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="imagenes/logo.png">
+<link rel="stylesheet" href="css/tienda.css">
+</head>
+<body>
+<div class="topbar">
+  <header>
+    <a href="index.html" class="header-brand">
+      <div class="logo-icon"><img src="imagenes/logo.png" alt="La Victoria" onerror="this.outerHTML='<span class=&quot;logo-mono&quot;>LV</span>'"></div>
+      <div>
+        <h1>La Victoria</h1>
+        <div class="header-subtitle">Perfumería</div>
+      </div>
+    </a>
+    <nav>
+      <a href="html/carrito.html" class="nav-btn"><span>🛒</span><span>Carrito (<span id="cartCount">0</span>)</span></a>
+      <a href="html/ubicacion.html" class="nav-btn"><span>📍</span><span>Ubicación</span></a>
+      <a href="html/admin.html" class="nav-btn"><span>🔐</span><span>Ingresar</span></a>
+    </nav>
+  </header>
+
+  <div class="novedades-container">
+    <div class="novedades" id="novedades">
+      <span>✨ Bienvenido a La Victoria</span>
+      <span>🌸 Fragancias para él y para ella</span>
+      <span>🚚 Envíos disponibles</span>
+      <span>💯 Calidad garantizada</span>
+      <span>📲 Pedidos fáciles y rápidos por WhatsApp</span>
+      <span>✨ Bienvenido a La Victoria</span>
+      <span>🌸 Fragancias para él y para ella</span>
+      <span>🚚 Envíos disponibles</span>
+      <span>💯 Calidad garantizada</span>
+      <span>📲 Pedidos fáciles y rápidos por WhatsApp</span>
+    </div>
+  </div>
+</div>
+
+<!-- Portada -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">Perfumería · Villavicencio</div>
+    <h2><span class="gold">Fragancias</span> que dejan huella</h2>
+    <p>Diseñador, nicho y árabes. Elige tus favoritas, arma tu pedido y confírmalo por WhatsApp en segundos.</p>
+    <div class="hero-cta">
+      <a href="#catalogo" class="btn-hero">Ver colección ↓</a>
+      <a href="html/ubicacion.html" class="btn-hero ghost">📍 Visítanos</a>
+    </div>
+  </div>
+  <div class="hero-stage" aria-hidden="true">
+    <div class="mist">
+      <i style="left:8%;width:90px;height:90px"></i>
+      <i style="left:30%;width:60px;height:60px;animation-delay:-3s"></i>
+      <i style="left:55%;width:110px;height:110px;animation-delay:-6s"></i>
+      <i style="left:78%;width:70px;height:70px;animation-delay:-9s"></i>
+    </div>
+    <div class="bwrap">
+      <div class="bottle" style="--s:110px"><div class="c"></div><div class="b"></div></div>
+      <span class="puff"></span><span class="puff"></span>
+    </div>
+  </div>
+</section>
+
+<main>
+  <div class="section-header" id="catalogo">
+    <h2 class="section-title gold">Nuestra Colección</h2>
+    <p class="section-description">Fragancias de diseñador, de nicho y árabes · Elige, arma tu pedido y confírmalo por WhatsApp</p>
+  </div>
+
+  <div class="filtros">
+    <button class="filtro-btn active" data-cat="todos">Todos</button>
+    <button class="filtro-btn" data-cat="Hombre">👨 Hombre</button>
+    <button class="filtro-btn" data-cat="Mujer">👩 Mujer</button>
+    <input type="search" id="buscador" class="search-box" placeholder="🔍 Buscar perfume o marca...">
+  </div>
+
+  <div id="contenedorProductos" class="contenedor">
+    <div class="loading-container">
+      <div class="spinner"></div>
+      <p>Cargando catálogo…</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p id="pie">© 2026 La Victoria · Todos los derechos reservados</p>
+</footer>
+
+<!-- Soporte WhatsApp -->
+<button class="soporte-btn" id="btnSoporte" aria-label="Soporte por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</button>
+
+<div id="modalSoporte" class="modal" role="dialog" aria-modal="true" aria-labelledby="soporteTitulo">
+  <div class="modal-contenido">
+    <div class="modal-header">
+      <h3 id="soporteTitulo" class="serif">¿Tienes preguntas?</h3>
+      <button class="btn-cerrar" id="cerrarSoporte" aria-label="Cerrar">×</button>
+    </div>
+    <p>Escríbenos sobre las lociones de la tienda o sobre otra que necesites.</p>
+    <textarea id="mensajeSoporte" placeholder="Ej: ¿Tienen Sauvage? ¿Envían a mi barrio?"></textarea>
+    <button class="btn-enviar" id="enviarSoporte">Enviar por WhatsApp</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/fx.js"></script>
+</body>
+</html>
