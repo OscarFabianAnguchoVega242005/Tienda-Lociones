@@ -16,7 +16,7 @@ var S={wa:(function(w){w=String(CFG.WHATSAPP||'').replace(/\D/g,'');return /^\d{
         ship:0,addr:'',hrs:'',map:'#',notice:[],ft:''};
 
 var sb=null;
-try{if(window.supabase&&CFG.SUPABASE_URL&&CFG.SUPABASE_URL.indexOf('TU-PROYECTO')<0)sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY,{auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}})}catch(e){}
+try{if(window.supabase&&CFG.SUPABASE_URL&&CFG.SUPABASE_URL.indexOf('TU-PROYECTO')<0)sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_KEY,{auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}})}catch(e){}
 
 /* ---------- carrito (localStorage) ---------- */
 function getCart(){try{return JSON.parse(localStorage.getItem(CART_KEY))||[]}catch(e){return[]}}

@@ -17,7 +17,7 @@ var S={wa:'',ship:0,addr:'',ft:''};
 try{var c=JSON.parse(localStorage.getItem(CFG_KEY));if(c)S=c}catch(e){}
 
 var sb=null;
-try{if(window.supabase&&CFG.SUPABASE_URL&&CFG.SUPABASE_URL.indexOf('TU-PROYECTO')<0)sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY,{auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}})}catch(e){}
+try{if(window.supabase&&CFG.SUPABASE_URL&&CFG.SUPABASE_URL.indexOf('TU-PROYECTO')<0)sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_KEY,{auth:{persistSession:false,autoRefreshToken:false,detectSessionInUrl:false}})}catch(e){}
 
 function getCart(){try{return JSON.parse(localStorage.getItem(CART_KEY))||[]}catch(e){return[]}}
 function setCart(c){localStorage.setItem(CART_KEY,JSON.stringify(c))}

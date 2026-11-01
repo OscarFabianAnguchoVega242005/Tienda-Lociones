@@ -7,9 +7,9 @@ var BUCKET='products',ST=['nuevo','confirmado','entregado','cancelado'],sb,prods
 function msg(t,bad){var m=$('msg');m.textContent=t;m.className=bad?'bad':'ok';clearTimeout(mt);mt=setTimeout(function(){m.textContent=''},4500)}
 
 if(!window.supabase||!CFG.SUPABASE_URL||CFG.SUPABASE_URL.indexOf('TU-PROYECTO')>-1){
-  $('login').hidden=false;$('lerr').textContent='Configura SUPABASE_URL y SUPABASE_ANON_KEY en config.js.';return;
+  $('login').hidden=false;$('lerr').textContent='Configura SUPABASE_URL y SUPABASE_KEY en config.js.';return;
 }
-sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_ANON_KEY);
+sb=window.supabase.createClient(CFG.SUPABASE_URL,CFG.SUPABASE_KEY);
 
 /* ---------- sesion ---------- */
 sb.auth.onAuthStateChange(function(_e,s){

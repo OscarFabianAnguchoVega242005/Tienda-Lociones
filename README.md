@@ -10,7 +10,7 @@ config.js · vendor/supabase.js · _headers · supabase/schema.sql
 
 ## Puesta en marcha
 1. Supabase: crea el proyecto → SQL Editor → pega `supabase/schema.sql` (cambia el correo admin).
-2. `config.js`: pon `SUPABASE_URL`, `SUPABASE_ANON_KEY` (solo la anon/publishable), `ADMIN_EMAIL`, `wa`, direccion y horario.
+2. `config.js`: pon `SUPABASE_URL`, `SUPABASE_KEY` (solo la anon/publishable), `ADMIN_EMAIL`, `wa`, direccion y horario.
 3. GitHub: `git init && git add . && git commit -m "tienda" && git push`.
 4. Cloudflare → Workers & Pages → Create → Pages → Connect to Git → elige el repo.
    Framework: None · Build command: (vacio) · Output directory: `/`.
